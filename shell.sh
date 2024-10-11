@@ -4,7 +4,7 @@
 # a library and command-line tool (curl) for transferring data using 
 # various network protocols. The name stands for "Client for URL"
 CURL="$(which curl)"
-if [ "$CURL" = "/usr/bin/curl" ]; then
+if [ -f "$CURL" ]; then
   echo -e "\e[1;33mCURL already installed.\e[0m"
   echo ""
 else
@@ -18,13 +18,13 @@ fi
 # Installing ZSH Shell, ZSH, also called the Z shell, 
 # is an extended version of the Bourne Shell (sh)
 ZSH="$(which zsh)"
-if [ "$ZSH" = "/usr/bin/zsh" ]; then
+if [ -f "$ZSH" ]; then
   echo -e "\e[1;33mZSH already installed.\e[0m"
   echo ""
 else
   echo -e "\e[1;35mInstalling ZSH.\e[0m"
   sudo apt install zsh
-  chsh -s /usr/bin/zsh
+  chsh -s "$(which zsh)"
   echo -e "\e[1;32mZSH installed successfully.\e[0m"
   echo ""
 fi
@@ -53,12 +53,13 @@ else
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   echo -e "\e[1;32mAutosuggestions installed successfully.\e[0m"
   echo ""
-  echo -e "\e[1;31mSet plugins=(zsh-autosuggestions) in ~/.zshrc\e[0m"
-  echo ""
-  echo -e "\e[1;37;41m                    \e[0m"
-  echo -e "\e[1;37;41m Restart the Shell. \e[0m"
-  echo -e "\e[1;37;41m                    \e[0m"
-  exit
+  sed -i 's/plugins=(git/plugins=(git zsh-autosuggestions/' ~/.zshrc
+  # echo -e "\e[1;31mSet plugins=(zsh-autosuggestions) in ~/.zshrc\e[0m"
+  # echo ""
+  # echo -e "\e[1;37;41m                    \e[0m"
+  # echo -e "\e[1;37;41m Restart the Shell. \e[0m"
+  # echo -e "\e[1;37;41m                    \e[0m"
+  # exit
 fi
 
 # Installing Powerlevel10k theme,
@@ -74,11 +75,12 @@ else
   echo -e "\e[1;31mPrerequisites: To Start powerlevel10k theme install MesloLGS Fonts first.\e[0m"
   echo "https://github.com/fontmgr/MesloLGSNF"
   echo ""
-  echo -e "\e[1;31mSet ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc\e[0m"
-  echo ""
-  echo -e "\e[1;37;41m                    \e[0m"
-  echo -e "\e[1;37;41m Restart the Shell. \e[0m"
-  echo -e "\e[1;37;41m                    \e[0m"
-  exit
+  sed -i 's/="robbyrussell"/="powerlevel10k/powerlevel10k"' ~/.zshrc
+  # echo -e "\e[1;31mSet ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc\e[0m"
+  # echo ""
+  # echo -e "\e[1;37;41m                    \e[0m"
+  # echo -e "\e[1;37;41m Restart the Shell. \e[0m"
+  # echo -e "\e[1;37;41m                    \e[0m"
+  # exit
 fi
 

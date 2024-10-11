@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Installing Python3-pip, which is a Python package manager
-PHP="$(which pip)"
-if [ "$PHP" = "/usr/bin/pip" ]; then
+PIP="$(which pip)"
+if [ -f "$PIP" ]; then
   echo -e "\e[1;33mPIP already installed.\e[0m"
   echo ""
 else
@@ -15,7 +15,7 @@ fi
 
 # Installing Unzip, Which unzip or extract documents
 UNZIP="$(which unzip)"
-if [ "$UNZIP" = "/usr/bin/unzip" ]; then
+if [ -f "$UNZIP" ]; then
   echo -e "\e[1;33mUnzip already installed.\e[0m"
   echo ""
 else
@@ -28,7 +28,7 @@ fi
 
 # Installing RipGrep, Which is a Recursive regex pattern matching tool
 RG="$(which rg)"
-if [ "$RG" = "/usr/bin/rg" ]; then
+if [ -f "$RG" ]; then
   echo -e "\e[1;33mRipGrep already installed.\e[0m"
   echo ""
 else
@@ -41,7 +41,7 @@ fi
 
 # Installing LuaRocks, Which is a package manager for Lua 
 LUAROCKS="$(which luarocks)"
-if [ "$LUAROCKS" = "/usr/bin/luarocks" ]; then
+if [ -f "$LUAROCKS" ]; then
   echo -e "\e[1;33mLuaRocks already installed.\e[0m"
   echo ""
 else
@@ -54,7 +54,7 @@ fi
 
 # Installing fd-find, fd is a program to find entries in your filesystem
 FDFIND="$(which fdfind)"
-if [ "$FDFIND" = "/usr/bin/fdfind" ]; then
+if [ -f "$FDFIND" ]; then
   echo -e "\e[1;33mFd-Find already installed.\e[0m"
   echo ""
 else
@@ -68,7 +68,7 @@ fi
 # Make is a command-line interface software tool that performs actions ordered 
 # by configured dependencies as defined in a configuration file called a makefile. 
 MAKE="$(which make)"
-if [ "$MAKE" = "/usr/bin/make" ]; then
+if [ -f "$MAKE" ]; then
   echo -e "\e[1;33mMake already installed.\e[0m"
   echo ""
 else
@@ -81,7 +81,7 @@ fi
 
 # The xclip tool can be used to interact with the system clipboard from the command line.
 XCLIP="$(which xclip)"
-if [ "$XCLIP" = "/usr/bin/xclip" ]; then
+if [ -f "$XCLIP" ]; then
   echo -e "\e[1;33mXClip already installed.\e[0m"
   echo ""
 else
@@ -94,7 +94,7 @@ fi
 
 # Download and Install Latest Neovim
 NVIM="$(which nvim)"
-if [ "$NVIM" = "/usr/bin/nvim" ]; then
+if [ -f "$NVIM" ]; then
   echo -e "\e[1;33mNeoVim already installed.\e[0m"
   echo ""
 else
