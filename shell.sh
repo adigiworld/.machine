@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Installing CURL, cURL is a computer software project providing 
 # a library and command-line tool (curl) for transferring data using 
@@ -41,6 +41,9 @@ else
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   echo -e "\e[1;32mOH-MY-ZSH installed successfully.\e[0m"
   echo ""
+  echo "source ~/.zsh_profile" >> ~/.zshrc
+  echo -e "\e[1;31mAdded source ~/.zsh_profile line in your ~/.zshrc file.\e[0m"
+  echo ""
 fi
 
 # Installing ZSH-Autosuggestions,
@@ -63,24 +66,19 @@ else
 fi
 
 # Installing Powerlevel10k theme,
-powerlevel10k="$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
-if [ -d "$powerlevel10k" ]; then
-  echo -e "\e[1;33mPowerlevel10k already installed.\e[0m"
-  echo ""
-else
-  echo -e "\e[1;35mInstalling powerlevel10k theme\e[0m"
-  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-  echo -e "\e[1;32mPowerlevel10k theme installed successfully.\e[0m"
-  echo ""
-  echo -e "\e[1;31mPrerequisites: To Start powerlevel10k theme install MesloLGS Fonts first.\e[0m"
-  echo "https://github.com/fontmgr/MesloLGSNF"
-  echo ""
-  sed -i 's/="robbyrussell"/="powerlevel10k/powerlevel10k"' ~/.zshrc
-  # echo -e "\e[1;31mSet ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc\e[0m"
-  # echo ""
-  # echo -e "\e[1;37;41m                    \e[0m"
-  # echo -e "\e[1;37;41m Restart the Shell. \e[0m"
-  # echo -e "\e[1;37;41m                    \e[0m"
-  # exit
-fi
+# powerlevel10k="$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
+# if [ -d "$powerlevel10k" ]; then
+#   echo -e "\e[1;33mPowerlevel10k already installed.\e[0m"
+#   echo ""
+# else
+#   echo -e "\e[1;35mInstalling powerlevel10k theme\e[0m"
+#   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+#   echo -e "\e[1;32mPowerlevel10k theme installed successfully.\e[0m"
+#   echo ""
+#   echo -e "\e[1;31mPrerequisites: To Start powerlevel10k theme install MesloLGS Fonts first.\e[0m"
+#   echo "https://github.com/fontmgr/MesloLGSNF"
+#   echo ""
+#   sed -i 's/="robbyrussell"/="powerlevel10k/powerlevel10k"' ~/.zshrc
+# fi
+
 

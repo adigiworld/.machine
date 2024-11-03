@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+pushd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    echo "stow $folder"
+    stow -D $folder
+    stow $folder -d $(pwd) -t $HOME
+done
+popd
+
+#pushd ./netflix
+#./stow
+#popd
+
+

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Installing Python3-pip, which is a Python package manager
 PIP="$(which pip)"
@@ -10,7 +10,7 @@ else
   sudo apt install python3-pip
   echo ""
   echo -e "\e[1;32mPython3 PIP installed successfully.\e[0m"
-	echo " "
+  echo " "
 fi
 
 # Installing Unzip, Which unzip or extract documents
@@ -23,7 +23,7 @@ else
   sudo apt install unzip
   echo ""
   echo -e "\e[1;32mUnzip installed successfully.\e[0m"
-	echo " "
+  echo " "
 fi
 
 # Installing RipGrep, Which is a Recursive regex pattern matching tool
@@ -36,7 +36,7 @@ else
   sudo apt install ripgrep
   echo ""
   echo -e "\e[1;32mRipGrep installed successfully.\e[0m"
-	echo " "
+  echo " "
 fi
 
 # Installing LuaRocks, Which is a package manager for Lua 
@@ -49,7 +49,7 @@ else
   sudo apt install luarocks
   echo ""
   echo -e "\e[1;32mLuaRocks installed successfully.\e[0m"
-	echo " "
+  echo " "
 fi
 
 # Installing fd-find, fd is a program to find entries in your filesystem
@@ -62,7 +62,7 @@ else
   sudo apt install fd-find
   echo ""
   echo -e "\e[1;32mSharkdp Fd-Fibd installed successfully.\e[0m"
-	echo " "
+  echo " "
 fi
 
 # Make is a command-line interface software tool that performs actions ordered 
@@ -76,7 +76,7 @@ else
   sudo apt install make
   echo ""
   echo -e "\e[1;32mMake installed successfully.\e[0m"
-	echo " "
+  echo " "
 fi
 
 # The xclip tool can be used to interact with the system clipboard from the command line.
@@ -126,6 +126,7 @@ if [ -d $nvim  ]; then
 else
   echo -e "\e[1;35mInstalling KickStart NeoVim\e[0m"
   git clone https://github.com/adigiworld/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+  echo -e "\e[1;32mKickStart NeoVim installed successfully.\e[0m"
   echo ""
 fi
 

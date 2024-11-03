@@ -1,4 +1,27 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+
+
+set relativenumber
+
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+set scrolloff=10
+set history=1000
+
+syntax on
+filetype indent on
+
+set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
+
+#MAPPING
+let mapleader = " "
+nnoremap <leader>x :!chmod +x %<CR>
+
+
 
 
 
@@ -8,7 +31,7 @@
 export PATH=$PATH:~/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
 
-export PATH=$PATH:~/.config/nvim-linux64/bin
+# export PATH=$PATH:~/.config/nvim-linux64/bin
 
 #---CONFIG END---
 
@@ -19,7 +42,7 @@ export PATH=$PATH:~/.config/nvim-linux64/bin
 # Option    |	    Description
 # -e	    | Enable interpretation of backslash escapes
 # \e[	    | Begin the color modifications
-# COLORm	| Color Code + ‘m’ at the end
+# COLORm    | Color Code + ‘m’ at the end
 # \e[0m	    | End the color modifications
 
 # ANSI — Color Escape Codes
@@ -29,7 +52,7 @@ export PATH=$PATH:~/.config/nvim-linux64/bin
 # Green	    |       32	      |         42	
 # Yellow    |       33	      |         43	
 # Blue	    |       34	      |         44	
-# Purple	|       35	      |         45	
+# Purple    |       35	      |         45	
 # Cyan	    |       36	      |         46	
 # Light Gray|	    37	      |         47
 
