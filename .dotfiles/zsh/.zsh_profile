@@ -1,12 +1,10 @@
 
-
-export DOTFILES=$HOME/.machine/.dotfiles
-
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/.cargo/bin
+
+#export DOTFILES=$HOME/.machine/.dotfiles
 
 # Where should I put you?
 bindkey -s ^f "~/.local/scripts/tmux-sessionizer\n"
 bindkey -s ^k "~/.local/scripts/tmux-cht.sh\n"
-
 
