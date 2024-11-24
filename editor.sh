@@ -98,12 +98,13 @@ if [ -f "$NVIM" ]; then
   echo -e "\e[1;33mNeoVim already installed.\e[0m"
   echo ""
 else
-  echo -e "\e[1;35mInstalling Latest Neovim.\e[0m"
-  sudo add-apt-repository ppa:neovim-ppa/unstable -y
-  sudo apt install neovim
-  echo ""
-  echo -e "\e[1;32mNVIM installed successfully.\e[0m"
-	echo " "
+  # echo -e "\e[1;35mInstalling Latest Neovim.\e[0m"
+  # sudo add-apt-repository ppa:neovim-ppa/unstable -y
+  # sudo apt install neovim
+  # echo ""
+  # echo -e "\e[1;32mNVIM installed successfully.\e[0m"
+  # echo " "
+  $(cd ~/.local && curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz && sudo tar -xzvf nvim-linux64.tar.gz && sudo mv nvim-linux64 nvim)
   # cd ~/.config
   # curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
   # cd ~
@@ -124,9 +125,12 @@ if [ -d $nvim  ]; then
   echo -e "\e[1;33mKickStart NeoVim already installed.\e[0m"
   echo ""
 else
-  echo -e "\e[1;35mInstalling KickStart NeoVim\e[0m"
-  git clone https://github.com/adigiworld/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
-  echo -e "\e[1;32mKickStart NeoVim installed successfully.\e[0m"
+  # echo -e "\e[1;35mInstalling KickStart NeoVim\e[0m"
+  # git clone https://github.com/adigiworld/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
+  # echo -e "\e[1;32mKickStart NeoVim installed successfully.\e[0m"
+  # echo ""
+  cp ./nvim ~/.config/
+  echo -e "\e[1;32mNeoVim config successfully.\e[0m"
   echo ""
 fi
 
