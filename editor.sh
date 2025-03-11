@@ -103,8 +103,8 @@ else
   # sudo apt install neovim
   # echo ""
   # echo -e "\e[1;32mNVIM installed successfully.\e[0m"
-  # echo " "
-  $(cd ~/.local && curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz && sudo tar -xzvf nvim-linux64.tar.gz && sudo mv nvim-linux64 nvim)
+  echo " "
+  # $(cd ~/.local && curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz && sudo tar -xzvf nvim-linux64.tar.gz && sudo mv nvim-linux64 nvim)
   # cd ~/.config
   # curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
   # cd ~
@@ -129,7 +129,7 @@ else
   # git clone https://github.com/adigiworld/kickstart.nvim.git "${XDG_CONFIG_HOME:-$HOME/.config}"/nvim
   # echo -e "\e[1;32mKickStart NeoVim installed successfully.\e[0m"
   # echo ""
-  cp ./nvim ~/.config/
+  cp -r ./nvim ~/.config/
   echo -e "\e[1;32mNeoVim config successfully.\e[0m"
   echo ""
 fi

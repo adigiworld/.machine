@@ -63,19 +63,19 @@ fi
 # Installing PHP, The term PHP is an acronym for 
 # PHP: Hypertext Preprocessor. PHP is a server-side scripting language 
 # designed specifically for web development.
-PHP="$(which php)"
-if [ -f "$PHP"  ]; then
-  echo -e "\e[1;33mPHP already installed.\e[0m"
-  echo ""
-else
-  echo "Before installing PHP you should install Apache (or a preferred web server) and a database service such as MySQL."
-  echo ""
-  echo -e "\e[1;35mInstalling PHP.\e[0m"
-  sudo apt install php -y
-  echo ""
-  echo -e "\e[1;32mPHP installed successfully.\e[0m"
-  echo ""
-fi
+# PHP="$(which php)"
+# if [ -f "$PHP"  ]; then
+#   echo -e "\e[1;33mPHP already installed.\e[0m"
+#   echo ""
+# else
+#   echo "Before installing PHP you should install Apache (or a preferred web server) and a database service such as MySQL."
+#   echo ""
+#   echo -e "\e[1;35mInstalling PHP.\e[0m"
+#   sudo apt install php -y
+#   echo ""
+#   echo -e "\e[1;32mPHP installed successfully.\e[0m"
+#   echo ""
+# fi
 
 # Perl is a high-level, general-purpose, interpreted, dynamic programming language.
 # PERL="$(which perl)"
