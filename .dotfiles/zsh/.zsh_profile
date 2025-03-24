@@ -1,8 +1,9 @@
 
 # export PATH=$PATH:$HOME/.local/nvim/bin
 export PATH="$HOME/.app/neovim/bin:$PATH"
+export PATH="$HOME/.app/go/bin:$PATH"
 export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:/usr/local/go/bin
+# export PATH=$PATH:/usr/local/go/bin
 
 #export DOTFILES=$HOME/.machine/.dotfiles
 

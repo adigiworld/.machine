@@ -49,7 +49,8 @@ if [ -f "$GO" ]; then
   echo ""
 else
   echo -e "\e[1;35mInstalling GO.\e[0m"
-  rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz
+  mkdir ~/.app && cd ~/.app && tar --xattrs -xvpf go1.23.2.linux-amd64.tar.gz
+  # rm -rf /usr/local/go && tar -C /usr/local -xzf go1.23.2.linux-amd64.tar.gz
   echo ""
   # echo -e "\e[1;31mWrite this in your .zshrc file.\e[0m"
   # echo -e "\e[1;31mexport PATH=$PATH:/usr/local/go/bin\e[0m"
