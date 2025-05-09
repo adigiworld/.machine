@@ -1,9 +1,22 @@
 
 # export PATH=$PATH:$HOME/.local/nvim/bin
-export PATH="$HOME/.app/neovim/bin:$PATH"
-export PATH="$HOME/.app/go/bin:$PATH"
+export PATH="$HOME/.aDev/neovim/bin:$PATH"
+export PATH="$HOME/.aDev/go/bin:$PATH"
 export PATH=$PATH:$HOME/.cargo/bin
 # export PATH=$PATH:/usr/local/go/bin
+
+# Java Env Setup
+export JAVA_HOME="/usr/lib/jvm/jdk"
+export JRE_HOME="/usr/lib/jvm/jdk"
+export CATALINA_HOME="/opt/tomcat"
+
+export PATH=$PATH:$CATALINA_HOME:$JAVA_HOME:$JRE_HOME:$JAVA_HOME/bin
+# export JAVA_HOME="$HOME/.a-dev/jdk"
+# export PATH=$PATH:$JAVA_HOME/bin
+export MAVEN_HOME="$HOME/.aDev/maven"
+export PATH=$PATH:$HOME/.aDev/maven/bin/
+export PATH=$PATH:$HOME/.aDev/gradle/bin/
+export PATH=$PATH:$HOME/.aDev/spring/bin/
 
 #export DOTFILES=$HOME/.machine/.dotfiles
 
